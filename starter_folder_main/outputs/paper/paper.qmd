@@ -1,0 +1,105 @@
+---
+title: "My title"
+subtitle: "My subtitle if needed"
+author: 
+  - First author
+  - Another author
+thanks: "Code and data are available at: LINK."
+date: today
+date-format: long
+abstract: "As a large and crowded city, Toronto experinecs a lot of fire incidents, and fire incident is also is one of the main causes of casualties and economic losses in toronto. Using data from OpenDataToronto, we analysis fire incidents in respect of thire causes, time of fire occurrence and resulting economic losses. first sentence: specify the general area of the paper and encourage the reader; second sentence: specify the dataset and methods at a general level; third sentence: specify the headline result; and a fourth sentence about implications.  "
+
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+ 
+#### Load Packages ####
+library(opendatatoronto)
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(ggplot2)
+ 
+#### Load Data ####
+clean_fire_incident_data <- read_csv(here::here(
+  "outputs/data/cleaned_fire_incidents_data.csv")
+  ,show_col_types = FALSE)
+ 
+```
+
+
+
+
+
+# Introduction
+
+
+In this paper, dataset used is from OpenDataToronto [@opendatatoronto]. Data is analysised using `R` [@citeR], also 'tidyverse' [@tidyverse], 'janitor' [@janitor] and 'lubridate' [@janitor] were used. Figures is created using 'ggplot2' [@ggplot2]
+
+
+
+
+# Data {#sec-data}
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+# Results
+
+
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+
+
+
+## Second discussion point
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+
+
+
+## Diagnostics
+
+
+
+\newpage
+
+
+# References
+
+
